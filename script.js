@@ -7,11 +7,19 @@ async function sendMessage() {
     addMessage(message, 'user');
     input.value = '';
 
-    const response = await fetch('http://localhost:3000/ask', {
+    // //for locally run  
+    // const response = await fetch('http://localhost:3000/ask', {
+        //     method: 'POST',
+        //     headers: { 'Content-Type': 'application/json' },
+        //     body: JSON.stringify({ message })
+        // }); 
+        //For Deployment like netlify vercel github etc
+    const response = await fetch('/ask', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message })
     });
+
 
     const data = await response.json();
     addMessage(data.reply, 'bot');
