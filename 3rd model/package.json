@@ -1,0 +1,18 @@
+{
+  "name": "3rd-model",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": " node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@google/genai": "^1.6.0",
+    "express": "^5.1.0",
+    "readline-sync": "^1.4.10"
+  }
+}
